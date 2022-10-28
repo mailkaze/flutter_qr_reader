@@ -7,7 +7,7 @@ class DireccionesScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Scaffold(
       body: Center(
-        child: Text('DireccionesScreen'),
+        child: Text('Direcciones Screen'),
       ),
     );
   }

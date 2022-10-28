@@ -6,7 +6,7 @@ class MapasScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: Text('MapasScreen'),
+      child: Text('Mapas Screen'),
     );
   }
 }
