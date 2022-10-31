@@ -10,7 +10,7 @@ class ScanListProvider extends ChangeNotifier {
   List<ScanModel> scans = [];
   String tipoSeleccionado = 'http';
 
-  nuevoScan(String valor) async {
+  Future<ScanModel> nuevoScan(String valor) async {
     final nuevoScan = ScanModel(valor: valor);
     final id = await DBProvider.db.nuevoScan(nuevoScan);
     // La DB le genera automáticamente el ID, lo traigo y se lo pongo
@@ -24,6 +24,8 @@ class ScanListProvider extends ChangeNotifier {
 
       notifyListeners();
     }
+
+    return nuevoScan;
   }
 
   cargarScans() async {
